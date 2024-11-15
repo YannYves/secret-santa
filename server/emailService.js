@@ -1,5 +1,6 @@
-require('dotenv').config(); // Load environment variables
 const nodemailer = require('nodemailer');
+
+require('dotenv').config(); // Load environment variables
 
 // const transporter = nodemailer.createTransport({
 //   service: 'gmail', // Example; use your preferred provider
@@ -8,6 +9,12 @@ const nodemailer = require('nodemailer');
 //     pass: process.env.PASSWORD,
 //   },
 // });
+
+console.log('SMTP Configuration:', {
+  host: process.env.SMTP_HOST,
+  port: process.env.SMTP_PORT,
+  user: process.env.SMTP_USER
+});
 
 
 
@@ -19,6 +26,8 @@ const transporter = nodemailer.createTransport({
     pass: process.env.SMTP_PASS,
   },
 });
+
+
 
 async function sendEmails(emails, pairs) {
   const emailPromises = emails.map((email) => {
