@@ -1,0 +1,12 @@
+{
+    "name": "secret-santa-backend",
+    "version": "1.0.0",
+    "scripts": {
+      "start": "node index.js" 
+    },
+    "dependencies": {
+      "dotenv": "^16.1.4",
+      "express": "^4.18.2",
+      "nodemailer": "^6.9.4"
+    }
+  }
