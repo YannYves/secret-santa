@@ -1,0 +1,15 @@
+{
+  "extends": "@parcel/config-default",
+  "transformers": {
+    "*.html": ["@parcel/transformer-html"],
+    "*.js": ["@parcel/transformer-js"],
+    "*.css": ["@parcel/transformer-css"]
+  },
+  "bundler": "@parcel/bundler-default",
+  "optimizers": {
+    "*.html": ["@parcel/optimizer-htmlnano"],
+    "*.js": ["@parcel/optimizer-terser"],
+    "*.css": ["@parcel/optimizer-cssnano"]
+  },
+  "reporters": ["...", "@parcel/reporter-cli"]
+}

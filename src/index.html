@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secret Santa - Random Draw</title>
+  
+  <!-- Meta for SEO -->
+  <meta name="description" content="Organize your Secret Santa with ease! A fun, festive, and free random draw tool for holiday gift exchanges.">
+  <meta name="keywords" content="secret, santa, secret santa, secret santa free, random draw santa, random draw santa free">
+  <meta property="og:title" content="Secret Santa - Random Draw">
+  <meta property="og:description" content="Organize your Secret Santa with ease! A fun, festive, and free random draw tool for holiday gift exchanges.">
+  <meta property="og:image" content="./santa.jpg">
+  <meta property="og:url" content="https://yourdomain.com">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GA_TRACKING_ID');
+  </script>
+</head>
+<body class="bg-red-50 text-gray-800 font-sans">
+  <header class="text-center py-8">
+    <h1 class="text-4xl font-bold text-red-600">🎅 Secret Santa Random Draw 🎁</h1>
+    <p class="mt-2 text-lg text-gray-700">Easily organize your Secret Santa with a few clicks!</p>
+  </header>
+
+  <!-- Festive Santa Image -->
+  <!-- <div class="text-center">
+    <img src="../dist/santa.jpg" alt="Festive Santa Claus" class="w-48 mx-auto mt-4">
+  </div> -->
+
+  <!-- Email Form -->
+  <main class="max-w-2xl mx-auto mt-8 p-4 bg-white shadow-md rounded-md">
+    <form id="santa-form">
+      <p class="text-center text-lg font-semibold mb-4">Add email addresses (up to 30):</p>
+      <div id="email-container" class="space-y-2">
+        <input type="email" name="emails[]" class="email-input w-full border border-gray-300 p-2 rounded" placeholder="Enter email address" required>
+        <input type="email" name="emails[]" class="email-input w-full border border-gray-300 p-2 rounded" placeholder="Enter another email address" required>
+      </div>
+      <button type="button" id="add-email-btn" class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add More Emails</button>
+      <div class="mt-6 text-center">
+        <button type="submit" id="submit-btn" class="bg-green-500 text-white px-6 py-3 rounded hover:bg-green-600 disabled:opacity-50" disabled>🎉 Run the Draw</button>
+      </div>
+      <p id="error-message" class="mt-4 text-center text-red-500 hidden">Error: You cannot have duplicate email addresses!</p>
+    </form>
+  </main>
+
+  <footer class="text-center mt-8 text-gray-600">
+    <p>&copy; 2024 Secret Santa. All rights reserved.</p>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
