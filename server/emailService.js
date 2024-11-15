@@ -10,12 +10,6 @@ require('dotenv').config(); // Load environment variables
 //   },
 // });
 
-console.log('SMTP Configuration:', {
-  host: process.env.SMTP_HOST,
-  port: process.env.SMTP_PORT,
-  user: process.env.SMTP_USER
-});
-
 
 
 const transporter = nodemailer.createTransport({
